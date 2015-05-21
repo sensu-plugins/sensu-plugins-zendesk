@@ -1,7 +1,15 @@
+
+require 'sensu-plugins-wordpress/version'
+
+# Load the defaults
+
 #
-# Set gem version
+# Default class
 #
-module SensuPluginsZendesk
-  # Gem version
-  VERSION = '0.0.1.alpha.1'
+module SensuPluginsWordpress
+  class << self
+  end
+
+  class << self
+  end
 end
