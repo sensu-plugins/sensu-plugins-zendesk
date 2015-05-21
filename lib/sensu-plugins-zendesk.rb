@@ -1,12 +1,12 @@
 
-require 'sensu-plugins-wordpress/version'
+require 'sensu-plugins-zendesk/version'
 
 # Load the defaults
 
 #
 # Default class
 #
-module SensuPluginsWordpress
+module SensuPluginsZendesk
   class << self
   end
 
