@@ -27,7 +27,7 @@ require 'sensu-handler'
 require 'zendesk_api'
 
 class Zendesk < Sensu::Handler
-  def handle
+  def handle # rubocop:disable all
     client = ZendeskAPI::Client.new do |config|
       config.url = settings['zendesk']['url']
 

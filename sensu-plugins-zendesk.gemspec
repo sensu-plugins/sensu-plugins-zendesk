@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.authors                = ['Sensu Plugins and contributors']
   s.cert_chain             = ['certs/sensu-plugins.pem']
   s.date                   = Date.today.to_s
-  s.description            = 'Sensu plugins for working with zendesk'
+  s.description            = 'Sensu plugins for zendesk'
   s.email                  = '<sensu-users@googlegroups.com>'
   s.executables            = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.files                  = Dir.glob('{bin,lib}/**/*') + %w(LICENSE README.md CHANGELOG.md)
@@ -31,9 +31,9 @@ Gem::Specification.new do |s|
   s.require_paths          = ['lib']
   s.required_ruby_version  = '>= 1.9.3'
   s.signing_key            = File.expand_path(pvt_key) if $PROGRAM_NAME =~ /gem\z/
-  s.summary                = 'Sensu plugins for working with zendesk'
+  s.summary                = 'Sensu plugins for zendesk'
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
-  s.version                = SensuPluginsWordpress::Version::VER_STRING
+  s.version                = SensuPluginsZendesk::Version::VER_STRING
 
   s.add_runtime_dependency 'sensu-plugin', '1.1.0'
   s.add_runtime_dependency 'zendesk-api',  '0.3.4'

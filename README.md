@@ -10,7 +10,7 @@
 ## Functionality
 
 ## Files
- * bin/handler-zendesk
+ * bin/handler-zendesk.rb
 
 ## Usage
 
