@@ -1,6 +1,6 @@
 ## Sensu-Plugins-zendesk
 
-[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-zendesk.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-zendesk)
+[ ![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-zendesk.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-zendesk)
 [![Gem Version](https://badge.fury.io/rb/sensu-plugins-zendesk.svg)](http://badge.fury.io/rb/sensu-plugins-zendesk)
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-zendesk/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-zendesk)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-zendesk/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-zendesk)
