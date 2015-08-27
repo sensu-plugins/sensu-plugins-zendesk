@@ -27,7 +27,31 @@ require 'sensu-handler'
 require 'zendesk_api'
 
 class Zendesk < Sensu::Handler
-  def handle # rubocop:disable all
+  def ticket_description
+    "Sensu Alert\r\n" \
+        'Client: ' + @event['client']['name'] + "\r\n" \
+        'Address: ' + @event['client']['address'] + "\r\n" \
+        'Subscriptions: ' + @event['client']['subscriptions'].join(', ') + "\r\n" \
+        'Check: ' + @event['check']['name'] + "\r\n" \
+        'Output: ' + @event['check']['output'] + "\r\n"
+  end
+
+  def ticket_tags
+    tags = []
+    unless settings['zendesk']['tags'].nil?
+      tags << settings['zendesk']['tags']
+    end
+    if settings['zendesk']['subscriptions_to_tags']
+      tags << @event['client']['subscriptions']
+    end
+    tags
+  end
+
+  def ticket_subject
+    'Alert - ' + @event['client']['name'] + ' - ' + @event['check']['name']
+  end
+
+  def handle
     client = ZendeskAPI::Client.new do |config|
       config.url = settings['zendesk']['url']
 
@@ -35,37 +59,12 @@ class Zendesk < Sensu::Handler
       config.username = settings['zendesk']['username']
 
       # Choose one of the following depending on your authentication choice
-      # #YELOW
-      unless settings['zendesk']['token'].nil? # rubocop:disable UnlessElse
-        config.token = settings['zendesk']['token']
-      else
+      if settings['zendesk']['token'].nil?
         config.password = settings['zendesk']['password']
+      else
+        config.token = settings['zendesk']['token']
       end
       config.retry = true
-    end
-
-    def ticket_subject
-      'Alert - ' + @event['client']['name'] + ' - ' + @event['check']['name']
-    end
-
-    def ticket_description
-      "Sensu Alert\r\n" \
-          'Client: ' + @event['client']['name'] + "\r\n" \
-          'Address: ' + @event['client']['address'] + "\r\n" \
-          'Subscriptions: ' + @event['client']['subscriptions'].join(', ') + "\r\n" \
-          'Check: ' + @event['check']['name'] + "\r\n" \
-          'Output: ' + @event['check']['output'] + "\r\n"
-    end
-
-    def ticket_tags
-      tags = []
-      unless settings['zendesk']['tags'].nil?
-        tags << settings['zendesk']['tags']
-      end
-      if settings['zendesk']['subscriptions_to_tags']
-        tags << @event['client']['subscriptions']
-      end
-      tags
     end
 
     begin
