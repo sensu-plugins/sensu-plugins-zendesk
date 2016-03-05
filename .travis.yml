@@ -1,19 +1,33 @@
 language: ruby
 cache:
-  - bundler
+- bundler
 install:
-  - bundle install
+- bundle install
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 notifications:
   email:
     recipients:
-      - sensu-plugin@sensu-plugins.io
+    - sensu-plugin@sensu-plugins.io
     on_success: change
     on_failure: always
-
 script:
-  - 'bundle exec rake default'
+- bundle exec rake default
+- gem build sensu-plugins-zendesk.gemspec
+- gem install sensu-plugins-zendesk-*.gem
+deploy:
+  provider: rubygems
+  api_key:
+    secure: QcS6gq6frtOai0I6ExPHZxzDdOqV3U4te50YdueL+5S+D5oAgccJMOQPmTaHNSlEvcT5KU0eZ7Zi1QpyO0X3ZYHzk21hNrk/pQpux20/SebCnyJjOVwew0axQ1sHUlRGTlqVMzjXY0Pguw+PN5+k/EVbbnMHe7k3PAQSDHyOPfE=
+  gem: sensu-plugins-zendesk
+  on:
+    ags: true
+    all_branches: true
+    rvm: 1.9.3
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    repo: sensu-plugins/sensu-plugins-zendesk

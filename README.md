@@ -5,7 +5,6 @@
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-zendesk/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-zendesk)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-zendesk/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-zendesk)
 [![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-zendesk.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-zendesk)
-[![Codeship Status for sensu-plugins/sensu-plugins-zendesk](https://codeship.com/projects/de182970-e203-0132-9c61-4ea0dd54b93d/status?branch=master)](https://codeship.com/projects/81356)
 
 ## Functionality
 
