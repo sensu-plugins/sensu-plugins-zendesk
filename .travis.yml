@@ -24,7 +24,7 @@ deploy:
     secure: QcS6gq6frtOai0I6ExPHZxzDdOqV3U4te50YdueL+5S+D5oAgccJMOQPmTaHNSlEvcT5KU0eZ7Zi1QpyO0X3ZYHzk21hNrk/pQpux20/SebCnyJjOVwew0axQ1sHUlRGTlqVMzjXY0Pguw+PN5+k/EVbbnMHe7k3PAQSDHyOPfE=
   gem: sensu-plugins-zendesk
   on:
-    ags: true
+    tags: true
     all_branches: true
     rvm: 1.9.3
     rvm: 2.0
