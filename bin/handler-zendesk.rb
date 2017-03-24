@@ -68,7 +68,7 @@ class Zendesk < Sensu::Handler
     end
 
     begin
-      timeout(60) do
+      Timeout.timeout(60) do
         if settings['zendesk']['status_to_use'].include?(@event['check']['status'])
           ZendeskAPI::Ticket.create(
             client,
