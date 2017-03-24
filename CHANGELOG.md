@@ -4,6 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## Unreleased
+### Added
+- Support for Ruby 2.3 (@eheydrick)
+
+### Removed
+- Ruby 1.9.3 support (@eheydrick)
+
+### Fixed
+- Pin to `activesupport` < 5 so Ruby 2.0, 2.1 are supported (@eheydrick)
+- Fix deprecated `timeout` warnings (@eheydrick)
 
 ## [0.0.3] - 2015-07-14
 ### Changed
