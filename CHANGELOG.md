@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+
+## [1.1.0] - 2018-01-21
+### Changed
+Bumped Rubocop to v0.52.1 for CVE 2017-8418 (@nicoleheejin)
+
 ### Added
 - Ruby 2.4.1 testing
 

@@ -82,7 +82,7 @@ class Zendesk < Sensu::Handler
         end
       end
     rescue Timeout::Error
-      puts 'zendesk -- timed out while attempting to create a ticket for #{ticket_subject} --'
+      puts "zendesk -- timed out while attempting to create a ticket for #{ticket_subject} -"
     end
   end
 end
