@@ -5,6 +5,7 @@ This CHANGELOG follows the format listed [here](https://github.com/sensu-plugins
 
 ## [Unreleased]
 
+## [2.0.0] - 2018-03-04
 ### Security
 - updated rubocop dependency to `~> 0.51.0` per: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8418 (@majormoses)
 
@@ -46,7 +47,8 @@ This CHANGELOG follows the format listed [here](https://github.com/sensu-plugins
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-zendesk/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-zendesk/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/sensu-plugins/sensu-plugins-zendesk/compare/1.0.0...2.0.0
 [1.0.0]: https://github.com/sensu-plugins/sensu-plugins-zendesk/compare/0.0.3...1.0.0
 [0.0.3]: https://github.com/sensu-plugins/sensu-plugins-zendesk/compare/0.0.2...0.0.3
 [0.0.2]: https://github.com/sensu-plugins/sensu-plugins-zendesk/compare/0.0.1...0.0.2
